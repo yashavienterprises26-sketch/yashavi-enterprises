@@ -1,0 +1,111 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+header{
+background:#0d1b2a;
+padding:20px 0;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+.container{
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#fff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffb703;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+color:white;
+}
+
+.overlay h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.overlay p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.btn{
+background:#ffb703;
+padding:16px 35px;
+text-decoration:none;
+color:#000;
+font-weight:700;
+border-radius:8px;
+}
+
+.about-home{
+padding:80px 10%;
+text-align:center;
+}
+
+.about-home h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.about-home p{
+font-size:20px;
+line-height:1.8;
+}
+
+footer{
+background:#0d1b2a;
+color:white;
+text-align:center;
+padding:30px;
+}
