@@ -1,111 +1,357 @@
+/*=================================================
+YASHAVI ENTERPRISES
+VERSION 2.0
+Premium Industrial Theme
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+--primary:#0A2342;
+--secondary:#F7931E;
+--dark:#061320;
+--light:#ffffff;
+--gray:#f4f6f9;
+--text:#4b4b4b;
+--shadow:0 10px 35px rgba(0,0,0,.15);
+
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f5f5f5;
-color:#222;
+
+font-family:'Poppins',sans-serif;
+background:#fff;
+color:var(--text);
+overflow-x:hidden;
+
 }
 
-header{
-background:#0d1b2a;
-padding:20px 0;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
 }
 
 .container{
+
 width:90%;
+max-width:1300px;
 margin:auto;
+
+}
+
+/*========================
+HEADER
+=========================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 0;
+background:rgba(6,19,32,.95);
+backdrop-filter:blur(12px);
+z-index:9999;
+transition:.4s;
+
+}
+
+header .container{
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 }
+
+/*========================
+LOGO
+=========================*/
 
 .logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+.logo img{
+
+width:75px;
+border-radius:10px;
+transition:.4s;
+
+}
+
+.logo img:hover{
+
+transform:rotate(-5deg) scale(1.05);
+
+}
+
+.logo-text h2{
+
+color:white;
 font-size:28px;
 font-weight:700;
-color:#fff;
+letter-spacing:1px;
+
 }
 
-nav ul{
+.logo-text p{
+
+color:var(--secondary);
+font-size:13px;
+letter-spacing:2px;
+font-weight:600;
+margin-top:3px;
+
+}
+
+/*========================
+NAVBAR
+=========================*/
+
+.navbar{
+
+display:flex;
+align-items:center;
+gap:35px;
+
+}
+
+.navbar ul{
+
 display:flex;
 list-style:none;
+gap:30px;
+
 }
 
-nav ul li{
-margin-left:30px;
+.navbar ul li{
+
+position:relative;
+
 }
 
-nav ul li a{
+.navbar ul li a{
+
 color:white;
-text-decoration:none;
+font-size:16px;
 font-weight:500;
 transition:.3s;
+
 }
 
-nav ul li a:hover{
-color:#ffb703;
+.navbar ul li a:hover{
+
+color:var(--secondary);
+
 }
+
+.navbar ul li a.active{
+
+color:var(--secondary);
+
+}
+
+.navbar ul li::after{
+
+content:'';
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:3px;
+background:var(--secondary);
+transition:.4s;
+
+}
+
+.navbar ul li:hover::after{
+
+width:100%;
+
+}
+
+/*========================
+QUOTE BUTTON
+=========================*/
+
+.quote-btn{
+
+padding:14px 28px;
+background:var(--secondary);
+color:white;
+font-weight:600;
+border-radius:50px;
+transition:.4s;
+
+}
+
+.quote-btn:hover{
+
+background:white;
+color:var(--primary);
+transform:translateY(-3px);
+
+}
+
+/*========================
+HERO
+=========================*/
 
 .hero{
+
 height:100vh;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+
+background:
+
+linear-gradient(rgba(6,19,32,.75),rgba(6,19,32,.75)),
+
+url("../images/hero/hero1.jpg");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
+padding-top:100px;
+
+}
+
+.hero-overlay{
+
+width:100%;
 text-align:center;
+
 }
 
-.overlay{
+.hero-content{
+
+max-width:900px;
+margin:auto;
 color:white;
+
+animation:fadeUp 1.3s;
+
 }
 
-.overlay h1{
-font-size:60px;
+.hero-content h4{
+
+color:var(--secondary);
+letter-spacing:4px;
+font-size:18px;
 margin-bottom:20px;
+
 }
 
-.overlay p{
-font-size:22px;
-margin-bottom:35px;
+.hero-content h1{
+
+font-size:72px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:30px;
+
 }
 
-.btn{
-background:#ffb703;
-padding:16px 35px;
-text-decoration:none;
-color:#000;
+.hero-content p{
+
+font-size:21px;
+line-height:1.9;
+color:#ddd;
+margin-bottom:40px;
+
+}
+
+/*========================
+BUTTONS
+=========================*/
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+padding:18px 42px;
+background:var(--secondary);
+color:white;
 font-weight:700;
-border-radius:8px;
+border-radius:60px;
+transition:.4s;
+
 }
 
-.about-home{
-padding:80px 10%;
-text-align:center;
+.btn-primary:hover{
+
+background:white;
+color:var(--primary);
+transform:translateY(-4px);
+
 }
 
-.about-home h2{
-font-size:42px;
-margin-bottom:20px;
-}
+.btn-secondary{
 
-.about-home p{
-font-size:20px;
-line-height:1.8;
-}
-
-footer{
-background:#0d1b2a;
+padding:18px 42px;
+border:2px solid white;
 color:white;
-text-align:center;
-padding:30px;
+font-weight:700;
+border-radius:60px;
+transition:.4s;
+
+}
+
+.btn-secondary:hover{
+
+background:white;
+color:var(--primary);
+
+}
+
+/*========================
+ANIMATION
+=========================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(80px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 }
